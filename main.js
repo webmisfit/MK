@@ -46,7 +46,7 @@ const changeHP = (player, minDMG, maxDMG, hp=document.querySelector(`.${player} 
     let x = parseInt(hp.style.width) - rand
     hp.style.width = (x>-1? x : 0)+'%'
 
-    if(x<1){
+    if(x<0){
         $randomButton.disabled = true
         alert(playersInfo[Number(player==='player1')].name + ' WINS!')
     }
